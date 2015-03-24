@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>eMart--- Products</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/products1.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/products2.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<div class="container">
+<!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li class="active"><a href="/products">Home</a></li>
+              <li><a href="/products/tv">Televisions</a></li>
+              <li><a href="/products/tablets">Tablets</a></li>
+              <li><a href="/products/phones">Phones</a></li>   
+              
+        </div>
+
+    
+
+    <!-- Page Content -->
+    
+
+        <!-- Page Heading -->
+<div class="col-xs-12 col-sm-9">
+        
+               <h1 class="page-header">Electronics
+                    
+                </h1>
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="/products/tv">
+                    <img class="img-responsive" src="/images/sony-tv-collage.jpg" alt="">
+                </a>
+            </div>
+            <%
+                for(var i in data){
+					%> 
+            <div class="col-md-5">
+                <h3><%=data[i].Category%></h3>
+                <li><%=data[i].Item1%></li>
+                <li><%=data[i].Item2%></li>
+                <li><%=data[i].Item3%></li>
+                <li><%=data[i].Item4%></li>
+	         <a class="btn btn-primary" href="/products/tv">View Televisions </a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="/products/phones">
+                    <img class="img-responsive" src="/images/Home-Page-Phone-Collage.png" "alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3><%=data[i].Category2%></h3>
+                <li><%=data[i].Item5%></li>
+                <li><%=data[i].Item6%></li>
+                <li><%=data[i].Item7%></li>
+                <li><%=data[i].Item8%></li>
+                <a class="btn btn-primary" href="/products/phones">View Phones </a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="/products/tablets">
+                    <img class="img-responsive" src="/images/Tablet-Collage-2013.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3><%=data[i].Category3%></h3>
+                <li><%=data[i].Item9%></li>
+                <li><%=data[i].Item10%></li>
+                <li><%=data[i].Item11%></li>
+                <li><%=data[i].Item12%></li>
+                <a class="btn btn-primary" href="/products/tablets">View Tablets </a>
+            </div>
+        </div>
+        <!-- /.row -->
+</div>
+
+<% }
+%>
+        
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Vijay Raj Thota @ CMPE 273</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/products/jquery-1.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/products/bootstrap.js"></script>
+
+
+
+
+</body></html>

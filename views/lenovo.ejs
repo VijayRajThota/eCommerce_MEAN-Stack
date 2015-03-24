@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>eMart----- lenovo </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/item1.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/item2.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- sidebar -->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <ul class="nav">
+              <li class="active"><a href="/products">Home</a></li>
+              <li><a href="/products/tv">Televisions</a></li>
+              <li><a href="/products/tablets">Tablets</a></li>
+              <li><a href="/products/phones">Phones</a></li>   
+              
+        </div>
+
+    <!-- Page Content -->
+    <div class="container">
+    <div class="col-xs-12 col-sm-9">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Televisions</p>
+                <div class="list-group">
+                    <a href="/products/tablets/ipad" class="list-group-item active">Ipad Air</a>
+                    <a href="/products/tablets/nexus7" class="list-group-item">Nexus 7</a>
+                    <a href="/products/tablets/tab4" class="list-group-item">Samsung Tab 4</a>
+                </div>
+            </div>
+
+<%
+for (var i in data){
+%>
+            <div class="col-md-9">
+
+                <div class="thumbnail">
+                    <img class="img-responsive" src="/images/Lenovo.png" alt="">
+                    <div class="caption-full">
+                    <h4><%=data[i].Name%></h4>
+                        <ul>
+                        <li>Operating System : <%=data[i].OS%></li>
+                        <li>Display : <%=data[i].Display%></li>
+                        <li>Memory : <%=data[i].Memory%></li>
+                        <li>Price : <%=data[i].Price%></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <!-- /.container -->
+
+    <div class="container">
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Vijay Raj Thota @ CMPE 273</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="/item/jquery-1.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/item/bootstrap.js"></script>
+
+
+
+
+</body></html>
